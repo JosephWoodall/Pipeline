@@ -24,33 +24,7 @@ print(fit)
 
 
 #class Pipeline:   
-#    
-# 
-#         
-#
-#    def fit_model():
-#
-#        """
-#        cross validation 
-#        hyperparameter tuning 
-#        predictions
-#        """
-#        M, L, kf = Pipeline.pre_processing()
-#        ret = {}
-#        for ids, (train_index, test_index) in enumerate(kf.split(M, L)):
-#            clf = Pipeline.model() # unpack parameters into clf if they exist
-#            clf.fit(M[train_index], L[train_index])
-#            pred = clf.predict(M[test_index])
-#            ret[ids]= {'clf': clf
-#                    ,'train_index': train_index
-#                    ,'test_index': test_index
-#                    ,'accuracy': accuracy_score(L[test_index], pred)
-#                    , 'balanced_accuracy': balanced_accuracy_score(L[test_index], pred)
-#                    , 'precision': precision_score(L[test_index], pred)
-#                    ,'average_precision': average_precision_score(L[test_index], pred)
-#                    , 'roc_auc': roc_auc_score(L[test_index], pred)
-#                    }
-#        return ret
+
 #
 #    
 #    def error_metrics():
