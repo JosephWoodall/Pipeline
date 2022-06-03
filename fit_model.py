@@ -7,19 +7,27 @@ from data import Data
 from model import Models
 
 class fitModel():
+    """class to fit the data from Data.finalData() to the model from Model.finalModel()
+    """
     
     def __init__(self, model, data):
         self.model = model
         self.data = data
         
     def fit(self):
+        """main function to fit the data from the __init__ above.
+
+        Returns:
+            ret: nested dictionary of results from the fit.
+            results.csv: csv that hosts the results from fit().
+        """
         ret = {}
         M, L, kf = self.data
         model = self.model
         for ids, (train_index, test_index) in enumerate(kf.split(M, L)):
             model.fit(M[train_index], L[train_index])
             pred = model.predict(M[test_index])
-            ret[ids]= {'clf': model
+            ret[ids]= {'model': model
                     ,'train_index': train_index
                     ,'test_index': test_index
                     ,'accuracy': accuracy_score(L[test_index], pred)

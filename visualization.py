@@ -1,57 +1,28 @@
-"""Classification Pipeline
+import numpy as np 
 
-Returns:
-    Final Analytics of Selected Classification Algorithm: 
+class Visualization():
     
-    Available Models for use include: Random Forest Classifier, Logistic Regression, and Decision Tree Classifier
-    Available Metrics for result interpretation include: accuracy, balanced accuracy, precision, average percision, and roc auc.
+    def __init__(self):
+        self.results = np.genfromtxt('data/results.csv', delimiter = ',')
+
+    """ for each key in fitModel.fit() -> ret after position 2, plot key:value """
+    
+    """
+    def accuracy()....
+    """
+    
+    """
+    def balanced_accuracy()...
+    """
+    
+    """
+    .....etc.....
+    """
+
+    
+
 """
-import matplotlib.pyplot as plt
-from sklearn.metrics import *
-from data import Data
-from fit_model import fitModel
-from model import Models
-
-data = Data(100,100,10).finalData()
-print(data)    
-listOfModels = Models().listOfModels()
-print(listOfModels)
-model = Models().finalModel()
-fit = fitModel(model, data).fit()
-print(fit)
- 
-
-
-
-#class Pipeline:   
-
-#
-#    
-#    def error_metrics():
-#        
-#        """
-#        Which are useful?
-#        calculate handful to be covered in most scenarios
-#        
-#        this is covered in fit_model()
-#        """
-#        pass
-#        
-#
-#    def visualization(metric):
-#        """
-#        everyone loves pictures
-#        roc curve
-#        predictions vs actual
-#        confusion matrices? Multiclass covered?
-#        distribution of error metrics
-#        """        
-#        res = Pipeline.fit_model()
-#        
-#        metric = input
-#        
-#        
-#        
+# Pseudo code below:
 #        if metric == "accuracy":
 #            temp = metric
 #            res_keys = [key for key, val in res.items() if temp in val]
@@ -109,18 +80,6 @@ print(fit)
 #
 #        
 #
-#    def results():
-#        """
-#        handy dandy results csv 
-#        return which models ran and their results
-#        visualizations again
-#        """
-#        pass
-#    
-#    def debug():
-#        M, L, kf = Pipeline.pre_processing()
-#        print("M shape: {}".format(M.shape))
-#        print("L shape {}".format(L.shape))
-#        print(kf)
 #
-#"""#
+#
+"""    

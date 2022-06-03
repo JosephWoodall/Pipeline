@@ -1,12 +1,21 @@
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
+from sklearn.tree import DecisionTreeClassifier
 
 class Models():
+    """Hosts the models used for fitModel()
+    """
 
     def __init__(self):
         self.algo = {
+            
+            # Classifiers #
             "RandomForestClassifier_":RandomForestClassifier(), 
-            "LogisticRegression_":LogisticRegression()
+            "LogisticRegression_":LogisticRegression(),
+            "DecisionTreeClassifier_":DecisionTreeClassifier()
+            
+            # Regressors #
+            
         }
 
     
