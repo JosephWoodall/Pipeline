@@ -1,6 +1,7 @@
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
+from sklearn.svm import SVC
 
 class Models():
     """Hosts the models used for fitModel()
@@ -12,7 +13,8 @@ class Models():
             # Classifiers #
             "RandomForestClassifier_":RandomForestClassifier(), 
             "LogisticRegression_":LogisticRegression(),
-            "DecisionTreeClassifier_":DecisionTreeClassifier()
+            "DecisionTreeClassifier_":DecisionTreeClassifier(), 
+            "SupportVectorMachine_": SVC()
             
             # Regressors #
             
