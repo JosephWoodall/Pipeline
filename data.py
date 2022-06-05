@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.model_selection import KFold 
+from sklearn.decomposition import PCA
 
 class Data(object):
     """class which ingests the data for downstream use 
@@ -38,10 +39,12 @@ class Data(object):
             variable kf: K-Fold Cross Validator
         """
         data = Data(self.row, self.col, self.n_folds).generateToyData()
+        pca = PCA()
         M, L, n_folds = data
         M = M 
         L = L 
         kf = KFold(n_splits = self.n_folds)
+        print(pca)
         return M, L, kf
     
     def finalData(self):
