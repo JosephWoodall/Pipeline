@@ -1,8 +1,15 @@
 import unittest
+import sys 
+import os
+
+sys.path.append("")
+
+from src.connection import * 
+from src import *
 
 class unitTests(unittest.TestCase):
     
-    def testMain(self):
+    def testMainImports(self):
         print("---------- Main")
 
     def testToyData(self):

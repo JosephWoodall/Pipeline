@@ -1,7 +1,7 @@
 import logging
 import sys
 from sqlalchemy import create_engine
-from config.config import config_keys
+from src.config.config import config_keys
 
 
 class Connection():

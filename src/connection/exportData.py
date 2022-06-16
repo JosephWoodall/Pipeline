@@ -1,6 +1,6 @@
 import logging
 import datetime
-from connection import Connection
+from src.connection.connection import Connection
 
 class exportData(Connection):
     
