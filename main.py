@@ -1,16 +1,11 @@
-from data import Data
-from fit_model import fitModel
-from model import Models
+from src.fit_model import fitModel
+from src.visualization import Visualization
+from src.toyData import toyData
+from src.model import Models
 
-import matplotlib.pyplot as plt 
-
-# Main run portion for now
-data = Data(100,100,10).finalData()
-print(data)  
-#preprocessing = Data(100, 100, 10).preProcessing()
-#print(preprocessing)
-listOfModels = Models().listOfModels()
-print(listOfModels)
-model = Models().finalModel()
-fit = fitModel(model, data).fit()
+toyData = toyData(100, 100 , 10).generateToyData(preProcessing=True, label = None)
+#financialData = Data(100, 100, 10).generateToyFinancialData()
+model = Models().finalModel('RandomForestClassifier_')
+fit = fitModel(model, toyData).fit(parameters = True)
 print(fit)
+plots = Visualization().allVisualizations(saveFig = False)

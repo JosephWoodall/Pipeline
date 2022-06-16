@@ -3,8 +3,8 @@ import csv
 
 from sklearn.metrics import *
 
-from data import Data
-from model import Models
+from src.toyData import toyData
+from src.model import Models
 
 class fitModel():
     """class to fit the data from Data.finalData() to the model from Model.finalModel()
@@ -14,7 +14,7 @@ class fitModel():
         self.model = model
         self.data = data
         
-    def fit(self):
+    def fit(self, parameters = bool):
         """main function to fit the data from the __init__ above.
 
         Returns:
@@ -37,12 +37,17 @@ class fitModel():
                     , 'roc_auc': roc_auc_score(L[test_index], pred)
                     }
             header = sorted(set(i for b in map(dict.keys, ret.values()) for i in b))
-            with open('data/results.csv', 'w', newline="") as f:
+            with open('results/csv/results.csv', 'w', newline="") as f:
                 write = csv.writer(f)
-                write.writerow(['location', *header])
+                write.writerow(['Epoch', *header])
                 for a, b in ret.items():
                     write.writerow([a]+[b.get(i, '') for i in header])
-        return ret
+            header_exclude = [elem for elem in header if elem != 'model' and elem != 'test_index' and elem != 'train_index']
+        print("---------- Model successfully fit! Results from model are saved in results/csv/results.csv! ----------")
+        print("---------- Available metrics: {} ----------".format(header_exclude))
+        if parameters == True: 
+            model.get_params(deep = True)
+        #return ret
    
     
         

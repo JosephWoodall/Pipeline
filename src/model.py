@@ -25,10 +25,10 @@ class Models():
         listOfAlgos = list(self.algo) #print the algo dict for user to see what is available
         print("Available algorithms: {}".format(listOfAlgos))
         
-    def finalModel(self):  
-        self.choice = input("Which model would you like to use?: ")
-        if self.choice in self.algo:
-            return self.algo.get(self.choice)
+    def finalModel(self, model):  
+        #self.model = input("Which model would you like to use?: ")
+        if model in self.algo:
+            return self.algo.get(model)
     
 
 

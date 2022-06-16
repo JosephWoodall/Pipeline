@@ -9,6 +9,8 @@ Returns:
     Available Metrics for result interpretation include: accuracy, balanced accuracy, precision, average percision, and roc auc.
     
 TODO: 
+- Add preprocessing to Data class
+- Add hyperparameter tuning to Models class
 - Add more error metrics  
 - Add visualizations for each error metric  
 - Update read me and code comments for use  
