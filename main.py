@@ -8,4 +8,4 @@ toyData = toyData(100, 100 , 10).generateToyData(preProcessing=True, label = Non
 model = Models().finalModel('RandomForestClassifier_')
 fit = fitModel(model, toyData).fit(parameters = True)
 print(fit)
-plots = Visualization().allVisualizations(saveFig = False)
+plots = Visualization().allVisualizations(saveFig = True)
