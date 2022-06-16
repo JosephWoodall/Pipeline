@@ -10,6 +10,4 @@ TODO:
 - Add more classifiers and fine tune their parameters 
 - Add regressors and appropriate toy data  
 
-#### TO RUN
-python3 main.py
 
