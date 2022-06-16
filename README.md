@@ -1,6 +1,9 @@
 # End-to-End Machine Learning Pipeline
 
 
+#### Local Secrets Management (without cloud-based solution)
+Add config.py to gitignore
+
 TODO: 
 - Add preprocessing to Data class
 - Add hyperparameter tuning to Models class

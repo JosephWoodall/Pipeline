@@ -1,1 +1,2 @@
-src/config/config.py
+# Youre going to want to add the config file below to git ignore if you are storing secret credentials within it
+#src/config/config.py
