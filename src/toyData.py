@@ -21,7 +21,7 @@ class toyData(object):
         self.n_folds = n_folds
         
     
-    def generateToyData(self, preProcessing = bool, label = None):
+    def generateToyData(self, preProcessing = bool):
         """Toy data for testing purposes only
 
         Returns:

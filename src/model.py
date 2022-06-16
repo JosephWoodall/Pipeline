@@ -10,21 +10,26 @@ class Models():
     def __init__(self):
         self.algo = {
             
-            # Classifiers #
-            "RandomForestClassifier_":RandomForestClassifier(), 
-            "LogisticRegression_":LogisticRegression(),
-            "DecisionTreeClassifier_":DecisionTreeClassifier(), 
-            "SupportVectorMachine_": SVC()
-            
-            # Regressors #
-            
+            'classifiers': # Classifiers #
+            {
+                "RandomForestClassifier_":RandomForestClassifier(), 
+                "LogisticRegression_":LogisticRegression(),
+                "DecisionTreeClassifier_":DecisionTreeClassifier(), 
+                "SupportVectorMachine_": SVC()
+            }
+            #,
+            #'regressors': # Regressors #
+            #{
+            #
+            #}
         }
 
     
     def listOfModels(self): #helper function
         listOfAlgos = list(self.algo) #print the algo dict for user to see what is available
         print("Available algorithms: {}".format(listOfAlgos))
-        
+    
+    
     def finalModel(self, model):  
         #self.model = input("Which model would you like to use?: ")
         if model in self.algo:

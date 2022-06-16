@@ -5,8 +5,7 @@
 Add config.py to gitignore
 
 TODO: 
-- Add preprocessing to Data class
-- Add hyperparameter tuning to Models class
+- Fix hyperparameter tuning in fitModels() class
 - Add more error metrics  
 - Add visualizations for each error metric  
 - Update read me and code comments for use  
